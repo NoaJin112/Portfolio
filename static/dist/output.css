@@ -1,0 +1,406 @@
+/*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+@layer properties;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.static {
+  position: static;
+}
+.sticky {
+  position: sticky;
+}
+.z-50 {
+  z-index: 50;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.w-full {
+  width: 100%;
+}
+.flex-1 {
+  flex: 1;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+.border-t {
+  border-top-style: var(--tw-border-style);
+  border-top-width: 1px;
+}
+.border-b {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+}
+.border-\[\#00ff66\] {
+  border-color: #00ff66;
+}
+.border-\[\#00ff66\]\/30 {
+  border-color: color-mix(in oklab, #00ff66 30%, transparent);
+}
+.border-\[\#00ff66\]\/40 {
+  border-color: color-mix(in oklab, #00ff66 40%, transparent);
+}
+.bg-gradient-to-br {
+  --tw-gradient-position: to bottom right in oklab;
+  background-image: linear-gradient(var(--tw-gradient-stops));
+}
+.text-center {
+  text-align: center;
+}
+.text-\[\#0b0f0b\] {
+  color: #0b0f0b;
+}
+.text-\[\#00ff66\] {
+  color: #00ff66;
+}
+.text-\[\#66ff99\] {
+  color: #66ff99;
+}
+.text-\[\#cfead8\] {
+  color: #cfead8;
+}
+.no-underline {
+  text-decoration-line: none;
+}
+.caret-\[\#00ff66\] {
+  caret-color: #00ff66;
+}
+.transition {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, ease);
+  transition-duration: var(--tw-duration, 0s);
+}
+.not-in-aria-expanded\:hidden {
+  &:not(:where(*[aria-expanded="true"]) *) {
+    display: none;
+  }
+}
+.after\:pointer-events-none {
+  &::after {
+    content: var(--tw-content);
+    pointer-events: none;
+  }
+}
+.after\:absolute {
+  &::after {
+    content: var(--tw-content);
+    position: absolute;
+  }
+}
+.after\:h-px {
+  &::after {
+    content: var(--tw-content);
+    height: 1px;
+  }
+}
+.hover\:bg-\[\#00ff66\]\/90 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in oklab, #00ff66 90%, transparent);
+    }
+  }
+}
+.hover\:text-\[\#00ff66\] {
+  &:hover {
+    @media (hover: hover) {
+      color: #00ff66;
+    }
+  }
+}
+.focus\:border-\[\#00ff66\] {
+  &:focus {
+    border-color: #00ff66;
+  }
+}
+.focus\:outline-2 {
+  &:focus {
+    outline-style: var(--tw-outline-style);
+    outline-width: 2px;
+  }
+}
+.focus\:-outline-offset-1 {
+  &:focus {
+    outline-offset: calc(1px * -1);
+  }
+}
+.focus\:outline-none {
+  &:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+}
+.in-aria-expanded\:hidden {
+  :where(*[aria-expanded="true"]) & {
+    display: none;
+  }
+}
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  * {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: radial-gradient(1000px 700px at 20% -10%, rgba(6, 182, 212, 0.08), transparent 60%),	radial-gradient(900px 600px at 80% 0%, rgba(8, 145, 178, 0.1), transparent 55%),	linear-gradient(180deg, #0f172a 0%, #0f172a 45%, #0f172a 100%);
+    color: #f1f5f9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+@layer components {
+  .fluid-card {
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  }
+  .fluid-ring {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  .navbar-font {
+    font-family: 'Fira Code', monospace;
+  }
+  .navbar-list {
+    list-style: none;
+  }
+  .body-font {
+    font-family: 'Ubuntu Mono', monospace;
+  }
+  .footer-bg {
+    background: rgba(15, 23, 42, 0.8);
+  }
+  .footer-font {
+    font-family: 'Ubuntu Mono', monospace;
+  }
+  .card-bg {
+    background: rgba(15, 23, 42, 0.6);
+  }
+  .input-bg {
+    background: rgba(15, 23, 42, 0.9);
+  }
+  .btn-primary {
+    background: #06b6d4;
+  }
+}
+#terminal {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  box-shadow: 2px 4px 10px rgba(48, 37, 37, 0.5);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+#terminal__bar {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  align-items: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background: linear-gradient(#3f464c 0%, #111414 100%);
+}
+#bar__buttons {
+  display: flex;
+  align-items: center;
+}
+.bar__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 5px;
+  font-size: 8px;
+  height: 12px;
+  width: 12px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 100%;
+  background: linear-gradient(#7d7871 0%, #595953 100%);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 1px 0 #41403A, 0 1px 1px 0 #474642;
+}
+.bar__button:hover {
+  cursor: pointer;
+}
+.bar__button:focus {
+  outline: none;
+}
+#bar__button--exit {
+  background: linear-gradient(#f37458 0%, #de4c12 100%);
+  background-clip: padding-box;
+}
+#bar__user {
+  color: #22d3ee;
+  margin-left: 6px;
+  font-size: 14px;
+  line-height: 15px;
+  font-family: Ubuntu, sans-serif;
+}
+#terminal__body {
+  background: #1e293b;
+  font-family: 'Ubuntu Mono', monospace;
+  flex: 1;
+  padding: 12px;
+  color: #cffafe;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+#terminal__history {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  color: #cffafe;
+}
+#terminal__prompt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #cffafe;
+}
+#terminal__prompt--user {
+  color: #06b6d4;
+}
+#terminal__prompt--location {
+  color: #22d3ee;
+}
+#terminal__prompt--bling {
+  color: #cffafe;
+}
+#terminal__prompt--cursor {
+  display: block;
+  height: 17px;
+  width: 8px;
+  margin-left: 2px;
+  animation: blink 1200ms linear infinite;
+}
+.terminal__error {
+  color: #ff6b6b;
+}
+#terminal__input {
+  flex: 1;
+  min-width: 100px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #06b6d4;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  caret-color: #06b6d4;
+  padding: 2px 0;
+}
+#terminal__input::placeholder {
+  color: #22d3ee;
+}
+@keyframes blink {
+  0% {
+    background: #ffffff;
+  }
+  49% {
+    background: #ffffff;
+  }
+  60% {
+    background: transparent;
+  }
+  99% {
+    background: transparent;
+  }
+  100% {
+    background: #ffffff;
+  }
+}
+@media (max-width: 600px) {
+  #terminal {
+    max-height: 90%;
+    width: 90%;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-content: "";
+      --tw-outline-style: solid;
+    }
+  }
+}

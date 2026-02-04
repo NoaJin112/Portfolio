@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
+  <link rel="stylesheet" href="{% static 'css/terminal.css' %}">
+  <div class="terminal-container">
+    <div class="terminal-topbar" id="terminal-topbar">
+      <div class="terminal-buttons">
+        <div class="terminal-button close" id="close-btn">×</div>
+        <div class="terminal-button minimize" id="minimize-btn">_</div>
+        <div class="terminal-button maximize" id="maximize-btn">□</div>
+      </div>
+      <div class="terminal-title" id="terminal-title">Portfolio Terminal</div>
+      <div class="terminal-screenshot">
+        <button id="screenshot-btn" class="screenshot-button">📷</button>
+      </div>
+    </div>
+
+    <div class="terminal-body" id="terminal-body">
+      <div class="terminal-output" id="terminal-output"></div>
+      <div class="terminal-input-line">
+        <span class="terminal-prompt" id="terminal-prompt">noa@portfolio:~$</span>
+        <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="terminal-output-after" id="terminal-output-after"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="{% static 'js/terminal.js' %}"></script>
+{% endblock %}

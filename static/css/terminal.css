@@ -1,0 +1,262 @@
+/* Terminal Container */
+.terminal-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+/* Top Bar */
+.terminal-topbar {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  user-select: none;
+  cursor: grab;
+}
+
+.terminal-topbar:active {
+  cursor: grabbing;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.terminal-button.close {
+  background: #ec4899;
+}
+
+.terminal-button.close:hover {
+  background: #ec4899;
+  transform: scale(1.2);
+}
+
+.terminal-button.minimize {
+  background: #f59e0b;
+}
+
+.terminal-button.minimize:hover {
+  background: #f59e0b;
+  transform: scale(1.2);
+}
+
+.terminal-button.maximize {
+  background: #10b981;
+}
+
+.terminal-button.maximize:hover {
+  background: #10b981;
+  transform: scale(1.2);
+}
+
+.terminal-title {
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 600;
+  flex: 1;
+  text-align: center;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.terminal-screenshot {
+  display: flex;
+  gap: 8px;
+}
+
+.screenshot-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.screenshot-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Terminal Body */
+.terminal-body {
+  flex: 1;
+  background: #0f172a;
+  overflow-y: auto;
+  padding: 16px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar Styling */
+.terminal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Output */
+.terminal-output {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-bottom: 8px;
+}
+
+.terminal-output div {
+  margin-bottom: 4px;
+}
+
+/* Input Line */
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.terminal-prompt {
+  color: #34d399;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e2e8f0;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 14px;
+  flex: 1;
+  caret-color: #34d399;
+  caret-width: 2px;
+}
+
+.terminal-input:focus {
+  outline: none;
+}
+
+.terminal-input::placeholder {
+  color: #64748b;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 49% {
+    caret-color: #34d399;
+  }
+  50%, 100% {
+    caret-color: transparent;
+  }
+}
+
+.terminal-input {
+  animation: blink 1s infinite;
+}
+
+/* Output After Input */
+.terminal-output-after {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.terminal-output-after div {
+  margin-top: 4px;
+}
+
+/* Command Output Colors */
+.command-success {
+  color: #34d399;
+}
+
+.command-error {
+  color: #f87171;
+}
+
+.command-info {
+  color: #60a5fa;
+}
+
+.command-warning {
+  color: #fbbf24;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terminal-container {
+    max-width: 100%;
+    height: 400px;
+  }
+
+  .terminal-body {
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .terminal-input {
+    font-size: 12px;
+  }
+
+  .terminal-title {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-container {
+    height: 350px;
+  }
+
+  .terminal-body {
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .terminal-input {
+    font-size: 11px;
+  }
+}

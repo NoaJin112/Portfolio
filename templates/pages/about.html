@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block title %}About - Portfolio{% endblock %}
+
+{% block content %}
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                About Me
+            </span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            Passionate developer crafting digital experiences
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <!-- Bio Card -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition">
+            <div class="flex items-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-2xl">
+                    👨‍💻
+                </div>
+                <h2 class="text-2xl font-bold ml-4 text-white">Background</h2>
+            </div>
+            <div class="space-y-4 text-gray-300">
+                <p>
+                    I'm a passionate web developer with experience in creating beautiful and functional websites.
+                    I love working with modern technologies and solving complex problems.
+                </p>
+                <p>
+                    My journey in web development started with a curiosity about how things work on the internet,
+                    and it has evolved into a fulfilling career helping businesses and individuals establish their online presence.
+                </p>
+            </div>
+        </div>
+
+        <!-- Skills Card -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition">
+            <div class="flex items-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-2xl">
+                    🚀
+                </div>
+                <h2 class="text-2xl font-bold ml-4 text-white">Skills</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                    <p class="text-gray-300 font-medium">HTML/CSS</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                    <p class="text-gray-300 font-medium">JavaScript</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                    <p class="text-gray-300 font-medium">React</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                    <p class="text-gray-300 font-medium">Vue.js</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                    <p class="text-gray-300 font-medium">Python</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                    <p class="text-gray-300 font-medium">Django</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                    <p class="text-gray-300 font-medium">SQL</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                    <p class="text-gray-300 font-medium">UI/UX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Timeline -->
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center text-white">Experience</h2>
+        <div class="space-y-8">
+            <div class="relative pl-8 border-l-2 border-blue-500">
+                <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-500"></div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-2">Senior Developer</h3>
+                    <p class="text-purple-400 mb-3">2024 - Present</p>
+                    <p class="text-gray-300">
+                        Leading development of modern web applications with focus on performance and user experience.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="relative pl-8 border-l-2 border-purple-500">
+                <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-purple-500"></div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-2">Full Stack Developer</h3>
+                    <p class="text-purple-400 mb-3">2022 - 2024</p>
+                    <p class="text-gray-300">
+                        Developed and maintained multiple client projects using React, Django, and modern web technologies.
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative pl-8 border-l-2 border-pink-500">
+                <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-pink-500"></div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-2">Junior Developer</h3>
+                    <p class="text-purple-400 mb-3">2020 - 2022</p>
+                    <p class="text-gray-300">
+                        Started my professional journey, learning industry best practices and building foundational skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Noa's portfolio showcasing projects, services, and contact information.">
+        <meta name="keywords" content="portfolio, developer, projects, services, contact">
+        <title>{% block title %}Portfolio{% endblock %}</title>
+        <link href="{% static 'src/input.css' %}" rel="stylesheet">
+        <link href="{% static 'css/terminal.css' %}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="antialiased bg-gradient-to-br from-slate-900 via-black to-slate-900 text-gray-100">
+        {% include 'navbar.html' %}
+        
+        <main class="min-h-screen">
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include 'footer.html' %}
+    </body>
+</html>

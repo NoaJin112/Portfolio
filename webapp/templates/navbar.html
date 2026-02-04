@@ -1,0 +1,19 @@
+<nav class="bg-slate-950/95 border-b border-cyan-500/30 backdrop-blur sticky top-0 z-50 w-full">
+    <div class="px-6 py-4 max-w-screen-xl mx-auto flex items-center justify-between">
+        <!-- Logo/Brand on left -->
+        <a href="{% url 'home' %}" class="flex items-center gap-2 no-underline group">
+            <div class="w-9 h-9 rounded bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-slate-950 font-bold text-lg group-hover:shadow-lg group-hover:shadow-cyan-500/50 transition">
+                &lt;/&gt;
+            </div>
+            <span class="text-cyan-300 font-bold hidden sm:inline text-sm">Noa</span>
+        </a>
+        
+        <!-- Navigation links on right -->
+        <div class="flex gap-8">
+            <a href="{% url 'home' %}" class="text-sm font-medium text-slate-300 hover:text-cyan-300 transition">Home</a>
+            <a href="{% url 'about' %}" class="text-sm font-medium text-slate-300 hover:text-cyan-300 transition">About</a>
+            <a href="{% url 'services' %}" class="text-sm font-medium text-slate-300 hover:text-cyan-300 transition">Services</a>
+            <a href="{% url 'contact' %}" class="text-sm font-medium text-slate-300 hover:text-cyan-300 transition">Contact</a>
+        </div>
+    </div>
+</nav>

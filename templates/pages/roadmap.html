@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+{% block title %}Roadmap - Portfolio{% endblock %}
+
+{% block content %}
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Development Roadmap
+            </span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            What I'm working on and what's coming next
+        </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="max-w-3xl mx-auto">
+        <!-- Q1 2026 -->
+        <div class="relative pb-8 mb-12">
+            <div class="flex items-baseline">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <div class="ml-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Q1 2026 - Current</h3>
+                    <div class="space-y-3">
+                        <div class="bg-white/5 border border-blue-500/30 rounded-lg p-4">
+                            <p class="text-blue-300 font-semibold">✓ Portfolio redesign with TailwindCSS</p>
+                            <p class="text-gray-400 text-sm mt-1">Modernizing the website with utility-first CSS framework</p>
+                        </div>
+                        <div class="bg-white/5 border border-blue-500/30 rounded-lg p-4">
+                            <p class="text-blue-300 font-semibold">✓ Projects showcase page</p>
+                            <p class="text-gray-400 text-sm mt-1">Displaying featured work with detailed descriptions</p>
+                        </div>
+                        <div class="bg-white/5 border border-blue-500/30 rounded-lg p-4">
+                            <p class="text-blue-300 font-semibold">🔄 Blog implementation</p>
+                            <p class="text-gray-400 text-sm mt-1">Building a dynamic blog system with categories and tags</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q2 2026 -->
+        <div class="relative pb-8 mb-12">
+            <div class="absolute left-6 top-12 w-1 h-12 bg-gradient-to-b from-blue-500/50 to-purple-500/50"></div>
+            <div class="flex items-baseline">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <div class="ml-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Q2 2026 - Planning</h3>
+                    <div class="space-y-3">
+                        <div class="bg-white/5 border border-purple-500/30 rounded-lg p-4">
+                            <p class="text-purple-300 font-semibold">🎯 Advanced search functionality</p>
+                            <p class="text-gray-400 text-sm mt-1">Implement full-text search with filtering across projects and blog posts</p>
+                        </div>
+                        <div class="bg-white/5 border border-purple-500/30 rounded-lg p-4">
+                            <p class="text-purple-300 font-semibold">🎯 Comment system</p>
+                            <p class="text-gray-400 text-sm mt-1">Add interactive comments with nested replies on blog posts</p>
+                        </div>
+                        <div class="bg-white/5 border border-purple-500/30 rounded-lg p-4">
+                            <p class="text-purple-300 font-semibold">🎯 Analytics integration</p>
+                            <p class="text-gray-400 text-sm mt-1">Track visitor metrics and user engagement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q3 2026 -->
+        <div class="relative pb-8 mb-12">
+            <div class="absolute left-6 top-12 w-1 h-12 bg-gradient-to-b from-purple-500/50 to-pink-500/50"></div>
+            <div class="flex items-baseline">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                    </svg>
+                </div>
+                <div class="ml-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Q3 2026 - Future</h3>
+                    <div class="space-y-3">
+                        <div class="bg-white/5 border border-pink-500/30 rounded-lg p-4">
+                            <p class="text-pink-300 font-semibold">💡 Dark/Light mode toggle</p>
+                            <p class="text-gray-400 text-sm mt-1">User preference for theme switching with persistence</p>
+                        </div>
+                        <div class="bg-white/5 border border-pink-500/30 rounded-lg p-4">
+                            <p class="text-pink-300 font-semibold">💡 Open source contributions showcase</p>
+                            <p class="text-gray-400 text-sm mt-1">Highlighting contributions to popular open source projects</p>
+                        </div>
+                        <div class="bg-white/5 border border-pink-500/30 rounded-lg p-4">
+                            <p class="text-pink-300 font-semibold">💡 Newsletter subscription</p>
+                            <p class="text-gray-400 text-sm mt-1">Email newsletter with latest blog posts and projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q4 2026 -->
+        <div class="relative pb-8">
+            <div class="absolute left-6 top-12 w-1 h-12 bg-gradient-to-b from-pink-500/50 to-orange-500/50"></div>
+            <div class="flex items-baseline">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <div class="ml-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Q4 2026 - Vision</h3>
+                    <div class="space-y-3">
+                        <div class="bg-white/5 border border-orange-500/30 rounded-lg p-4">
+                            <p class="text-orange-300 font-semibold">🌟 Community platform</p>
+                            <p class="text-gray-400 text-sm mt-1">Build a community around shared interests and projects</p>
+                        </div>
+                        <div class="bg-white/5 border border-orange-500/30 rounded-lg p-4">
+                            <p class="text-orange-300 font-semibold">🌟 Mentorship program</p>
+                            <p class="text-gray-400 text-sm mt-1">Offering guidance and mentorship to aspiring developers</p>
+                        </div>
+                        <div class="bg-white/5 border border-orange-500/30 rounded-lg p-4">
+                            <p class="text-orange-300 font-semibold">🌟 Speaking engagements</p>
+                            <p class="text-gray-400 text-sm mt-1">Sharing knowledge at conferences and meetups</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Focus -->
+    <div class="mt-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-12 text-center">
+        <h2 class="text-2xl font-bold text-white mb-4">Currently Focusing On</h2>
+        <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+            I'm actively working on expanding my portfolio, contributing to open source projects, and building tools that help developers be more productive. Get in touch if you'd like to collaborate!
+        </p>
+        <a href="{% url 'contact' %}" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-lg transition transform hover:scale-105">
+            Let's Work Together
+        </a>
+    </div>
+</section>
+{% endblock %}

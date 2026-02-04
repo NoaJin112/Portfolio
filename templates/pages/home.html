@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home - Portfolio{% endblock %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="text-center lg:text-left">
+                <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                    Ambitieuze automatisering, devops en containerisatie engineer. 
+                </p>
+                <p class="text-l md:text-1.5xl text-gray-300 mb-8">
+                    Hallo, mijn naam is Noa en ik ben 24 jaar. Ik ben recent afgestudeerd aan de Hanze als Network & Security Engineer.
+                    <br><br>
+                    Op deze website richt ik mij op mijn portfolio en professionele ontwikkeling. Mijn interesses liggen bij rollen als DevOps engineer, system engineer en binnen cloud- en infrastructuuromgevingen.
+                    In mijn vrije tijd houd ik mij bezig met Linux-challenges, zoals SadServers en werk ik aan mijn Proxmox-server, die ik configureer en automatiseer met Ansible. Daarnaast ben ik mij aan het verdiepen in Terraform om mijn kennis van infrastructuur als code verder uit te breiden.
+                    Persoonlijke projecten zullen hier op korte termijn worden toegevoegd.
+                </p>
+                <!-- <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="{% url 'contact' %}" class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-lg transition transform hover:scale-105">
+                        Contact
+                    </a> -->
+                    <!-- <a href="{% url 'projects' %}" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-lg border border-white/20 transition">
+                        View My Work
+                    </a> -->
+                <!-- </div> -->
+            </div>
+
+            <!-- Terminal -->
+            <div class="hidden lg:block">
+                <div class="terminal-container" style="max-width: 500px; height: 400px; margin-left: auto;">
+                    <!-- Terminal Top Bar -->
+                    <div class="terminal-topbar" id="terminal-topbar">
+                        <div class="terminal-buttons">
+                            <div class="terminal-button close" id="close-btn">×</div>
+                            <div class="terminal-button minimize" id="minimize-btn">_</div>
+                            <div class="terminal-button maximize" id="maximize-btn">□</div>
+                        </div>
+                        <div class="terminal-title" id="terminal-title">Portfolio Terminal</div>
+                        <div class="terminal-screenshot">
+                            <button id="screenshot-btn" class="screenshot-button">📷</button>
+                        </div>
+                    </div>
+
+                    <!-- Terminal Body -->
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-output" id="terminal-output"></div>
+                        <div class="terminal-input-line">
+                            <span class="terminal-prompt" id="terminal-prompt">noa@portfolio:~$</span>
+                            <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false">
+                        </div>
+                        <div class="terminal-output-after" id="terminal-output-after"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+    <div class="absolute top-0 right-0 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-0 left-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-white">Clean Code</h3>
+            <p class="text-gray-400">Writing maintainable, scalable, and efficient code that stands the test of time.</p>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition">
+            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-white">Modern Design</h3>
+            <p class="text-gray-400">Creating beautiful, responsive interfaces with attention to detail and user experience.</p>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition">
+            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-white">Fast Performance</h3>
+            <p class="text-gray-400">Optimized applications that load quickly and provide smooth, responsive interactions.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Skillset</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
+            <img src="{% static 'images/bash_icon.png' %}" alt="Bash" class="w-16 h-16 mx-auto mb-2 object-contain">
+            <p class="text-gray-300 font-medium">Bash</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
+            <img src="{% static 'images/python_icon.png' %}" alt="Python" class="w-16 h-16 mx-auto mb-2 object-contain">
+            <p class="text-gray-300 font-medium">Python</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
+            <img src="{% static 'images/ansible_icon.png' %}" alt="Ansible" class="w-16 h-16 mx-auto mb-2 object-contain">
+            <p class="text-gray-300 font-medium">Ansible</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
+            <img src="{% static 'images/saltstack_icon.jpg' %}" alt="Saltstack" class="w-16 h-16 mx-auto mb-2 object-contain">
+            <p class="text-gray-300 font-medium">Saltstack</p>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="{% static 'js/terminal.js' %}"></script>
+
+<style>
+@keyframes blob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+.animate-blob {
+    animation: blob 7s infinite;
+}
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+</style>
+
+{% endblock %}
