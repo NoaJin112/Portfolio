@@ -7,5 +7,4 @@ urlpatterns = [
     path('roadmap/', views.roadmap, name='roadmap'),
     path('contact/', views.contact, name='contact'),
     path('terminal/', views.terminal, name='terminal'),
-    path('api/terminal/', views.terminal_command, name='terminal_command'),
 ]
