@@ -32,7 +32,7 @@ A modern, responsive portfolio website built with Django and Tailwind CSS. This 
 
 ```
 .
-├── config/                 # Django project configuration
+├── config/                # Django project configuration
 │   ├── settings.py        # Project settings
 │   ├── urls.py            # Main URL routing
 │   ├── wsgi.py            # WSGI configuration

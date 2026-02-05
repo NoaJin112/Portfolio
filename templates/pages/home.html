@@ -101,31 +101,161 @@
 
 <!-- Technologies Section -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Skillset</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
-            <img src="{% static 'images/bash_icon.png' %}" alt="Bash" class="w-16 h-16 mx-auto mb-2 object-contain">
-            <p class="text-gray-300 font-medium">Bash</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">Skillset</h2>
+    
+    <!-- Carousel Container -->
+    <div class="relative px-12 md:px-16">
+        <!-- Previous Button -->
+        <button id="skills-prev" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+
+        <!-- Skills Container -->
+        <div id="skills-scroll-container" class="overflow-x-auto overflow-y-hidden rounded-xl scrollbar-hide cursor-grab active:cursor-grabbing" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
+            <div id="skills-track" class="flex gap-4 pb-2">
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 text-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex-shrink-0 w-[calc(50%-8px)] md:w-[calc(25%-12px)]">
+                    <img src="{% static 'images/bash_icon.png' %}" alt="Bash" class="w-20 h-20 mx-auto mb-3 object-contain">
+                    <p class="text-gray-200 font-medium text-sm">Bash</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 text-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex-shrink-0 w-[calc(50%-8px)] md:w-[calc(25%-12px)]">
+                    <img src="{% static 'images/python_icon.png' %}" alt="Python" class="w-20 h-20 mx-auto mb-3 object-contain">
+                    <p class="text-gray-200 font-medium text-sm">Python</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 text-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex-shrink-0 w-[calc(50%-8px)] md:w-[calc(25%-12px)]">
+                    <img src="{% static 'images/ansible_icon.png' %}" alt="Ansible" class="w-20 h-20 mx-auto mb-3 object-contain">
+                    <p class="text-gray-200 font-medium text-sm">Ansible</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 text-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex-shrink-0 w-[calc(50%-8px)] md:w-[calc(25%-12px)]">
+                    <img src="{% static 'images/saltstack_icon.jpg' %}" alt="Saltstack" class="w-20 h-20 mx-auto mb-3 object-contain">
+                    <p class="text-gray-200 font-medium text-sm">Saltstack</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 text-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex-shrink-0 w-[calc(50%-8px)] md:w-[calc(25%-12px)]">
+                    <img src="{% static 'images/html_icon.png' %}" alt="HTML" class="w-20 h-20 mx-auto mb-3 object-contain">
+                    <p class="text-gray-200 font-medium text-sm">HTML</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 text-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex-shrink-0 w-[calc(50%-8px)] md:w-[calc(25%-12px)]">
+                    <img src="{% static 'images/css_icon.png' %}" alt="CSS" class="w-20 h-20 mx-auto mb-3 object-contain">
+                    <p class="text-gray-200 font-medium text-sm">CSS</p>
+                </div>
+            </div>
         </div>
-        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
-            <img src="{% static 'images/python_icon.png' %}" alt="Python" class="w-16 h-16 mx-auto mb-2 object-contain">
-            <p class="text-gray-300 font-medium">Python</p>
-        </div>
-        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
-            <img src="{% static 'images/ansible_icon.png' %}" alt="Ansible" class="w-16 h-16 mx-auto mb-2 object-contain">
-            <p class="text-gray-300 font-medium">Ansible</p>
-        </div>
-        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
-            <img src="{% static 'images/saltstack_icon.jpg' %}" alt="Saltstack" class="w-16 h-16 mx-auto mb-2 object-contain">
-            <p class="text-gray-300 font-medium">Saltstack</p>
-        </div>
+
+        <button id="skills-next" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
     </div>
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="{% static 'js/terminal.js' %}"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollContainer = document.getElementById('skills-scroll-container');
+    const track = document.getElementById('skills-track');
+    const prevBtn = document.getElementById('skills-prev');
+    const nextBtn = document.getElementById('skills-next');
+    
+    let currentIndex = 0;
+    const skills = track.children;
+    const totalSkills = skills.length;
+    let isScrolling = false;
+    
+    function getVisibleSkills() {
+        return window.innerWidth >= 768 ? 4 : 2;
+    }
+    
+    function updateButtonStates() {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        
+        prevBtn.disabled = scrollLeft <= 0;
+        nextBtn.disabled = scrollLeft >= maxScroll - 1;
+        
+        prevBtn.style.opacity = scrollLeft <= 0 ? '0.4' : '1';
+        nextBtn.style.opacity = scrollLeft >= maxScroll - 1 ? '0.4' : '1';
+        prevBtn.style.cursor = scrollLeft <= 0 ? 'not-allowed' : 'pointer';
+        nextBtn.style.cursor = scrollLeft >= maxScroll - 1 ? 'not-allowed' : 'pointer';
+    }
+    
+    prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const skillWidth = skills[0].offsetWidth;
+        const gap = 16;
+        scrollContainer.scrollBy({
+            left: -(skillWidth + gap),
+            behavior: 'smooth'
+        });
+    });
+    
+    nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const skillWidth = skills[0].offsetWidth;
+        const gap = 16;
+        scrollContainer.scrollBy({
+            left: skillWidth + gap,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Update button states on scroll
+    scrollContainer.addEventListener('scroll', function() {
+        updateButtonStates();
+    });
+    
+    // Drag to scroll functionality
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+    
+    scrollContainer.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        scrollContainer.style.cursor = 'grabbing';
+        startX = e.pageX - scrollContainer.offsetLeft;
+        scrollLeft = scrollContainer.scrollLeft;
+    });
+    
+    scrollContainer.addEventListener('mouseleave', function() {
+        isDragging = false;
+        scrollContainer.style.cursor = 'grab';
+    });
+    
+    scrollContainer.addEventListener('mouseup', function() {
+        isDragging = false;
+        scrollContainer.style.cursor = 'grab';
+    });
+    
+    scrollContainer.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - scrollContainer.offsetLeft;
+        const walk = (x - startX) * 2;
+        scrollContainer.scrollLeft = scrollLeft - walk;
+    });
+    
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(updateButtonStates, 100);
+    });
+    
+    updateButtonStates();
+});
+</script>
+
 <style>
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
 @keyframes blob {
     0%, 100% { transform: translate(0, 0) scale(1); }
     33% { transform: translate(30px, -50px) scale(1.1); }
